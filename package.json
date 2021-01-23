@@ -21,7 +21,8 @@
   "homepage": "https://github.com/cgsdesign/food-festival#readme",
   "devDependencies": {
     "webpack": "^5.16.0",
-    "webpack-bundle-analyzer": "^4.3.0"
+    "webpack-bundle-analyzer": "^4.3.0",
+    "webpack-pwa-manifest": "^4.3.0"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
