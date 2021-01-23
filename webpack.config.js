@@ -11,6 +11,9 @@
         //npm install -D file-loader
         //npm i image-webpack-loader  - makes images optimized
 //npm run build
+//Service Workers
+        //npm i webpack-dev-server -D
+
 
 //VOCAB:
 //Time to Interactive = (TTI)
@@ -18,11 +21,11 @@
   //Loaders are used mostly for non JavaScript files such as image, CSS, and HTML files.
 //Plugins are scoped more on the bundle level and deliver changes at the end of the build
   //While loaders are configured in the module property of the webpack configuration object, plugins are configured in the plugins array.
-
-
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const path = require("path");
-const webpack = require("webpack");
+//Service workers are background scripts that run in the browser, separate from the JavaScript.
+  //they help to  handle fetch requests differently
+  const webpack = require("webpack");
+  const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+  const path = require("path");
 
 module.exports = {
   entry: {
@@ -51,7 +54,7 @@ module.exports = {
               //below puts the files into a dist subfolder
               publicPath: function(url) {
                 return url.replace("../", "/assets/")
-              }
+              },
             }  
           },
           {
@@ -75,3 +78,5 @@ module.exports = {
       mode: 'development'
 
 };
+
+//module.exports = config;
